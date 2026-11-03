@@ -43,6 +43,6 @@ $('#filters').addEventListener('click',e=>{let b=e.target.closest('[data-filter]
 $('#cartItems').addEventListener('click',e=>{let q=e.target.closest('[data-qty]'),r=e.target.closest('[data-remove]');if(q){let id=q.dataset.qty;cart[id]=(cart[id]||0)+Number(q.dataset.delta);if(cart[id]<=0)delete cart[id];save()}if(r){delete cart[r.dataset.remove];save()}});
 $('#checkout').onclick=()=>{if(Object.keys(cart).length){$('#checkoutModal').classList.add('open')}};$('#closeModal').onclick=()=>$('#checkoutModal').classList.remove('open');$('#checkoutModal').addEventListener('click',e=>{if(e.target.id==='checkoutModal')$('#checkoutModal').classList.remove('open')});$('#checkoutForm').addEventListener('submit',e=>{e.preventDefault();cart={};save();$('#checkoutModal').classList.remove('open');closeCart();e.target.reset();toast('Demo order complete — no payment was taken.')});$('#newsletter').addEventListener('submit',e=>{e.preventDefault();e.target.reset();toast('Thanks for subscribing! (Demo)')});document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeCart();$('#checkoutModal').classList.remove('open')}});renderProducts();renderCart();
 </script>
-<p>CI/CD Deployment Test - Version 2</p>
+<p>CI/CD Deployment Test - Version 3</p>
 </body>
 </html>
