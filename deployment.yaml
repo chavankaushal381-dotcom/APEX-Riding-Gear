@@ -16,6 +16,6 @@ spec:
         - name: ecr-secret
       containers:
         - name: apex-website
-          image: 358563824856.dkr.ecr.ap-southeast-2.amazonaws.com/apex-riding-gear:v1
+          image: 358563824856.dkr.ecr.ap-southeast-2.amazonaws.com/apex-riding-gear:latest
           ports:
             - containerPort: 80
